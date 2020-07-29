@@ -20,9 +20,13 @@ public final class App {
     }
 
     public static void main(String[] args) {
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext(ru.innopolis.PersistenceConfig.class);
-        final UserOperationService userOperationService = context.getBean(UserOperationService.class);
+//        ApplicationContext context =
+//                new AnnotationConfigApplicationContext(ru.innopolis.PersistenceConfig.class);
+//        final UserOperationService userOperationService = context.getBean(UserOperationService.class);
+//        start(userOperationService);
+    }
+
+    public static void start(UserOperationService userOperationService) {
         userOperationService.addUsers(generateUsers());
 
         long countUsers = userOperationService.getCountUsers();
